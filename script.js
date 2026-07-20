@@ -1,9 +1,3 @@
-/*
-   IT 3203 Project Milestone 3
-   Author: Joshua Brunson
-   External JavaScript checks the quiz, displays detailed feedback,
-   and clears the quiz for another attempt.
-*/
 
 "use strict";
 
@@ -47,7 +41,6 @@ function resultCard(number, isCorrect, earned, correctAnswer) {
 function gradeQuiz(event) {
     event.preventDefault();
 
-    // Built-in HTML validation checks the required short answer and radio groups.
     if (!quizForm.reportValidity()) {
         return;
     }
@@ -105,7 +98,7 @@ function clearQuiz() {
     resultsBox.className = "quiz-results";
     resultsBox.innerHTML = "";
 
-    // Move focus back to the first question after the browser resets the form.
+   
     window.setTimeout(() => document.getElementById("q1").focus(), 0);
 }
 
